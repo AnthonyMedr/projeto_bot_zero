@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",                   
+    "module": "commonjs",                            
+    "rootDir": "./api",                                 
+    "moduleResolution": "node",                     
+    "outDir": "./lib",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,  
+    "typeRoots": ["./node_modules/@types"]
+  },
+  "include": ["api/**/*", "functions/server.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts", "test.ts", "testes", "api/modules/functions/Admin"],
+}
