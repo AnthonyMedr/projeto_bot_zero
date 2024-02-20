@@ -1,0 +1,1 @@
+export type DownloadMedia = (Buffer|string|undefined)
