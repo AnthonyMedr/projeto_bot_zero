@@ -1,5 +1,7 @@
 import { Core_, Sock } from "../Utils/Types";
 import path from "path"
+import { MakeSticker } from "../functions/stickers";
+import { MemberProcess, DeleteMessages } from "../functions/admin";
 
 const aliveMedia = path.join(__dirname, 'alive.jpeg')
 
@@ -15,6 +17,16 @@ async function PrivateChat(core:Core_, sock:Sock)
                 await core.Functions.MsgFunction.sendMedia(aliveMedia, "Estou aqui! Porém ainda estou em processo de desenvolvimento e apredizagem");
                 return 0
             }
+            
+            if(command == "fig"){
+                await MakeSticker(core)
+                return 0
+            }
+
+            if(command == "del"){
+                await DeleteMessages(core,sock)
+                return 0
+        }
         
         }3
     }
