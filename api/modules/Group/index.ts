@@ -18,38 +18,32 @@ async function GroupChat(core:Core_, sock:Sock)
                 return 0
             }
             
-
-        }3
-
-        {
-            let command: string | undefined = core.Message.command;
             if(command == "palpite")
             {
                 await core.Functions.MsgFunction.reply("Hoje dá Flamengo");
                 return 0
             }
-            
+
+            if(command == "fig"){
+                await MakeSticker(core)
+                return 0
+            }
+
+            if(command == "ban"){
+                await  MemberProcess(core,sock)
+                return 0
+            }
+
+            if(command == "del"){
+                await DeleteMessages(core,sock)
+                return 0
+        }
+
+
 
         }3
-        
-        {
-        let command: string | undefined = core.Message.command;
-        if(command == "fig"){
-            await MakeSticker(core)
 
-    }
-}
-    let command: string | undefined = core.Message.command;
-    if(command == "ban"){
-       await  MemberProcess(core,sock)
-    }
 
-    {
-        let command: string | undefined = core.Message.command;
-        if(command == "del"){
-            await DeleteMessages(core,sock)
-        }
-    }
 
 
     }
